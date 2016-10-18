@@ -26,10 +26,14 @@ In case you want to do it, read all these steps, and then follow them one by one
 
 Your RapsberryPi is ready to be used. Let's do the magic.
 
+## Configure keyboard
+* Press `Windows` key to open the Menu.
+* Open `Preferences > Mouse and Keyboard Settings`
+* Good luck!
+
 ## Configure WiFi to connect automatically to your WiFi network.
 You can use Ethernet, but I do not come from the past, so, I'm going to use a WiFi interface to use internet and connect my PC to the RapsberryPi using SSH.
 Using your display and your external keyboard, follow these steps:
-* Power on RaspberryPi
 * Press `Windows` key to open the Menu.
 * Open `Accessories > Terminal`
 * `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
@@ -74,8 +78,7 @@ In your SSH client:
 ## Pre dependencies
 Before starting working/playing with any project, you have to follow this stets to install basic software.
 Run all this commands in your RaspberryPi.
-* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your NOOBS is too old, it will take too long! ~1 hour for me, because my NOOBS has more than 2 years). If during this execution you see some questions liek "There were changes in a package, what should I do?", just select the default option (most of times: just press ENTER)
-* Update basic pre installed software `sudo apt-get upgrade -y`
+* Update basic pre installed software `sudo apt-get update` and `sudo apt-get upgrade -y`. I recommend to DO NOT upgrade the distro, because the new one could be prepare to be used in a new RapsberryPi model (hardware), and you may have problems with some packages (yes, I had that problems).
 * Basic software installation `sudo apt-get install -y curl git`
 
 ### Projects
