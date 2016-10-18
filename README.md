@@ -13,7 +13,7 @@ Sorry for my english. Feel free to send Pull Request fixing my languaje mistakes
 * You will need a display connected to the RaspberryPi using HDMI and a KeyBoard connected by USB.
 * We recommend to have a USB-WiFi device, just in case.
 
-## Restart RaspberryPi
+## Restart RaspberryPi SO
 We recommend to reset your RaspberryPi before starting.
 In case you want to do it, read all these steps, and then follow them one by one:
 
@@ -46,13 +46,35 @@ network={
 * Run `hostname -I`. That IP is your RaspberryPi IP in your WiFi network. It will be useful to connect using SSH, so, write it down in a paper.
 
 Now, you are connected to your WiFi. From now, we going to use SSH to do all the remaining things.
+You can disconnect your keyboard and display. We won't continue using it.
 
 ## Connect to RapsberryPi using SSH
+Open your SSH client and connect to your RapsberryPi.
+
+### For Mac users
+* Open a Terminal
+* `ssh YOUR_RASPBERRY_IP -l pi` (Example: `ssh 192.168.0.10 -l pi` or `ssh pi@192.168.0.10`)
+* Password: `raspberry`
+
+### For Windows users
+[Feel free to send a Pull Request]
+
+## Restart the RaspberryPi
+In your SSH client:
+
+* sudo shutdown –r now
+
+Your RaspberryPi will close your connection, so, after one minute, reconnect your SSH again.
+
+## Power Off the RaspberryPi
+In your SSH client:
+
+* sudo shutdown –h
 
 ## Pre dependencies
 Before starting working/playing with any project, you have to follow this stets to install basic software.
 Run all this commands in your RaspberryPi.
-* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade`
+* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your RaspberryPi is old, will take too long!)
 * Basic software `sudo apt-get install -y curl git`
 
 ### Projects
