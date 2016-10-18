@@ -79,7 +79,7 @@ In your SSH client:
 Before starting working/playing with any project, you have to follow this stets to install basic software.
 Run all this commands in your RaspberryPi.
 * Update basic pre installed software `sudo apt-get update` and `sudo apt-get upgrade -y`. I recommend to DO NOT upgrade the distro, because the new one could be prepare to be used in a new RapsberryPi model (hardware), and you may have problems with some packages (yes, I had that problems).
-* Basic software installation `sudo apt-get install -y curl git`
+* Remove unused packages `sudo apt-get autoremove -y`
 
 ### Projects
 
