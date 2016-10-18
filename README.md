@@ -62,20 +62,21 @@ Open your SSH client and connect to your RapsberryPi.
 ## Restart the RaspberryPi
 In your SSH client:
 
-* sudo shutdown –r now
+* `sudo shutdown –r now`
 
 Your RaspberryPi will close your connection, so, after one minute, reconnect your SSH again.
 
 ## Power Off the RaspberryPi
 In your SSH client:
 
-* sudo shutdown –h now
+* `sudo shutdown –h now`
 
 ## Pre dependencies
 Before starting working/playing with any project, you have to follow this stets to install basic software.
 Run all this commands in your RaspberryPi.
-* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your RaspberryPi is old, will take too long!)
-* Basic software `sudo apt-get install -y curl git`
+* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your RaspberryPi is old, will take too long! ~30 minutes for me)
+* Update basic pre installed software `sudo apt-get upgrade -y`
+* Basic software installation `sudo apt-get install -y curl git`
 
 ### Projects
 
