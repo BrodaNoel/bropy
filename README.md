@@ -74,7 +74,7 @@ In your SSH client:
 ## Pre dependencies
 Before starting working/playing with any project, you have to follow this stets to install basic software.
 Run all this commands in your RaspberryPi.
-* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your NOOBS is too old, it will take too long! ~1 hour for me, because my NOOBS has more than 2 years)
+* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your NOOBS is too old, it will take too long! ~1 hour for me, because my NOOBS has more than 2 years). If during this execution you see some questions liek "There were changes in a package, what should I do?", just select the default option (most of times: just press ENTER)
 * Update basic pre installed software `sudo apt-get upgrade -y`
 * Basic software installation `sudo apt-get install -y curl git`
 
