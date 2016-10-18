@@ -41,12 +41,12 @@ network={
 }
 ```
 * Exit saving (`Control + X`, `Y`, `ENTER`)
-* Run `sudo ifdown wlan0` and `sudo ifup wlan0` (Rit will restart your WiFi device, so, it's going to connect to your WiFi network)
+* Run `sudo ifdown wlan0` and `sudo ifup wlan0` (It will restart your WiFi device, so, it's going to connect to your WiFi network)
 * Wait for a couple of seconds.
 * Run `hostname -I`. That IP is your RaspberryPi IP in your WiFi network. It will be useful to connect using SSH, so, write it down in a paper.
 
 Now, you are connected to your WiFi. From now, we going to use SSH to do all the remaining things.
-You can disconnect your keyboard and display. We won't continue using it.
+You can disconnect your keyboard and display. We won't continue using them.
 
 ## Connect to RapsberryPi using SSH
 Open your SSH client and connect to your RapsberryPi.
@@ -74,7 +74,7 @@ In your SSH client:
 ## Pre dependencies
 Before starting working/playing with any project, you have to follow this stets to install basic software.
 Run all this commands in your RaspberryPi.
-* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your NOOBS is old, will take too long! ~30 minutes for me)
+* Update SO `sudo apt-get update` and then `sudo apt-get dist-upgrade -y` (if your NOOBS is too old, it will take too long! ~1 hour for me, because my NOOBS has more than 2 years)
 * Update basic pre installed software `sudo apt-get upgrade -y`
 * Basic software installation `sudo apt-get install -y curl git`
 
