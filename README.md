@@ -6,8 +6,8 @@ Sorry for my english. Feel free to send Pull Request fixing my languaje mistakes
 
 ## You have to know, before starting
 * The RaspberryPi used for this project, is `RaspberryPi 2 Model B` (https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
-* Your RaspberryPi should use `NOOBS` (https://www.raspberrypi.org/downloads/noobs/).
-* We recommend restart your RaspberryPi SO before follow the guide (read mor about it in next steps)
+* Your RaspberryPi should use `NOOBS` (https://www.raspberrypi.org/downloads/noobs/) with `Rapsbian Jessie`.
+* We recommend restart your RaspberryPi SO before follow the guide (read more about it in next steps)
 * Your RaspberryPi is using the user by default (user: pi, password: raspberry)
 * Your PC/Mac should has installed some software to access to the RaspberryPi by SSH (We recommend PuTTY for Windows, and SSH command is pre installed in Mac)
 * You will need a display connected to the RaspberryPi using HDMI and a KeyBoard connected by USB.
