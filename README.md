@@ -81,9 +81,15 @@ Run all this commands in your RaspberryPi.
 * Update basic pre installed software `sudo apt-get update` and `sudo apt-get upgrade -y`. I recommend to DO NOT upgrade the distro, because the new one could be prepare to be used in a new RapsberryPi model (hardware), and you may have problems with some packages (yes, I had that problems).
 * Remove unused packages `sudo apt-get autoremove -y`
 
+## Install BroPy in your RaspberryPi
+It doesn't matter if you only will use one of all the BroPy projects. We recommend to install/clone all BroPy in your RaspberryPi. Follow this steps:
+* Move to `~` running `cd`
+* Run `git clone https://github.com/BrodaNoel/bropy.git`
+* Done. Now, BroPy is installed in `~/bropy`. If you change this folder, you may have problems.
+
 ### Projects
 
-#### SkyBroPy
+#### BroPySky
 Suite for PyInTheSky projects.
 The community call `#PyInTheSky` all projects when in some way, you put your RaspberryPy in the sky for taking photos, or atmospheric measures.
 
