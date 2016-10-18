@@ -69,7 +69,7 @@ Your RaspberryPi will close your connection, so, after one minute, reconnect you
 ## Power Off the RaspberryPi
 In your SSH client:
 
-* sudo shutdown –h
+* sudo shutdown –h now
 
 ## Pre dependencies
 Before starting working/playing with any project, you have to follow this stets to install basic software.
