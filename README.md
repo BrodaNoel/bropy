@@ -83,9 +83,10 @@ Run all this commands in your RaspberryPi.
 
 ## Install BroPy in your RaspberryPi
 It doesn't matter if you only will use one of all the BroPy projects. We recommend to install/clone all BroPy in your RaspberryPi. Follow this steps:
-* Move to `~` running `cd`
-* Run `git clone https://github.com/BrodaNoel/bropy.git`
-* Done. Now, BroPy is installed in `~/bropy`. If you change this folder, you may have problems.
+* Move to `~` running `cd`. (If you change this folder, you may have problems.)
+* `git clone https://github.com/BrodaNoel/bropy.git`
+* `./install.sh`
+* Done. Now, BroPy is installed in `~/bropy`. 
 
 ### Projects
 
