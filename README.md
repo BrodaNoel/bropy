@@ -57,7 +57,7 @@ Open your SSH client and connect to your RapsberryPi.
 
 ### For Mac users
 * Open a Terminal
-* `ssh YOUR_RASPBERRY_IP -l pi` (Example: `ssh 192.168.0.10 -l pi` or `ssh pi@192.168.0.10`)
+* `ssh pi@YOUR_RASPBERRY_IP` (Example: `ssh pi@192.168.0.10`)
 * Password: `raspberry`
 
 ### For Windows users
