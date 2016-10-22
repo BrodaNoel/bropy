@@ -139,5 +139,6 @@ The community call `#PyInTheSky` all projects when in some way, you put your Ras
 ### Projects comming
 If you have an idea, create an Issue and we'll create it!
 
-#### BroPyPrinter
-A basic and portable printer (no, not 3D)
+* `BroPyPrinter`: A basic and portable printer (no, not 3D)
+* `BroPyDrone`: Well, you know, a drone.
+* `BroPySubmarine`: A submarine. OHHH!!! YOU LOVED IT, RIGHT?!
