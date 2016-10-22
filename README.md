@@ -136,7 +136,7 @@ We hope you get fun here!
 Suite for PyInTheSky projects.
 The community call `#PyInTheSky` all projects when in some way, you put your RaspberryPy in the sky for taking photos, or atmospheric measures.
 
-### Projects comming
+### Projects coming
 If you have an idea, create an Issue and we'll create it!
 
 * `BroPyPrinter`: A basic and portable printer (no, not 3D)
