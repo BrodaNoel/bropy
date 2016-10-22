@@ -1,8 +1,8 @@
 # BroPy
 BroPy, a full suite for RaspberryPi control.
-Each project has its own folder and documentation.
+Each project and module have its own folder and documentation.
 
-Sorry for my english. Feel free to send Pull Request fixing my languaje mistakes.
+Sorry for my english. Feel free to send Pull Request fixing my languaje mistakes (do not touch my code... you will die mother f... just kidding. Create issues or PR as you want! It's free! Woho!).
 
 ## You have to know, before starting
 * The RaspberryPi used for this project, is `RaspberryPi 2 Model B` (https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
