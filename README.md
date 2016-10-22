@@ -117,11 +117,9 @@ Easy, right? But, how we will define which module should we use? Because, rememb
 
 Let's supouse you bought your RaspberryPi and a temperature measurer called "temp-0123". The first thing you have to do, is go to `modules` folder, and check if someone already create the module (the driver) for your module. If no one did it, you have to do it (or just create an issue and we can Google something for you), BUT, if you have luck, maybe someone did it, and you just have to use it.
 
-Projects just define HOW things should works, but it doesn't define WHICH module should be implemented to do it. So, the code we created a few minutes ago, is enough for us, and now we just need to run it defining which module should implement. How to do it? Easy, you have to say something like: "Hey BroPy, let's run the `TheFancyTemperatureMeasurer`, using the `temp-0123` and `email` module". As you should be thinking right now, we must have crated a module called `email` inside the `modules` folder. So, in you *terminal*, run:
-`bropy -p TheFancyTemperatureMeasurer -m temp-0123,email`
-
-* `-p` means "project"
-* `-m` means "modules", and all of them should be separated by comma, with no spaces.
+Projects just define HOW things should works, but it doesn't define WHICH module should be implemented to do it. So, the code we created a few minutes ago, is enough for us, and now we just need to run it defining which module should implement. How to do it? Easy, you have to say something like: "Hey BroPy, let's run the `TheFancyTemperatureMeasurer`, using the `temp-0123` and `email` module". As you should be thinking right now, we must have crated a module called `email` inside the `modules` folder. So, in your *terminal*, run:
+`bropy -p TheFancyTemperatureMeasurer`
+The project folder should contains a configuration file where you define the modules to use.
 
 Obviously it's not all things you have to do to create a project. If you want to learn in deep how to do it, check the `creating-a-project.md` file.
 
