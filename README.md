@@ -6,11 +6,10 @@ Sorry for my english. Feel free to send Pull Request fixing my languaje mistakes
 
 ## You have to know, before starting
 * The RaspberryPi used for this project, is `RaspberryPi 2 Model B` (https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
-* Your RaspberryPi should use `NOOBS` (https://www.raspberrypi.org/downloads/noobs/) with `Rapsbian Jessie`.
+* We recommend to use `NOOBS` (https://www.raspberrypi.org/downloads/noobs/) with `Rapsbian Jessie`. It's better to re-install the SO, and those things. Not a MUST.
 * We recommend restart your RaspberryPi SO before follow the guide (read more about it in next steps)
-* Your RaspberryPi is using the user by default (user: pi, password: raspberry)
 * Your PC/Mac should has installed some software to access to the RaspberryPi by SSH (We recommend PuTTY for Windows, and SSH command is pre installed in Mac)
-* You will need a display connected to the RaspberryPi using HDMI and a KeyBoard connected by USB.
+* You will need a display connected to the RaspberryPi using HDMI and a KeyBoard connected by USB. Just in case you want to re-install the SO before starting.
 * We recommend to have a USB-WiFi device, just in case.
 
 ## Restart RaspberryPi SO
@@ -54,6 +53,7 @@ You can disconnect your keyboard and display. We won't continue using them.
 
 ## Connect to RapsberryPi using SSH
 Open your SSH client and connect to your RapsberryPi.
+We use user `pi`, because is the default user.
 
 ### For Mac users
 * Open a Terminal
@@ -103,11 +103,15 @@ It doesn't matter how the module works. You know that a temperature measure modu
 In order to create this project, you should create a folder called `TheFancyTemperatureMeasurer`, into `projects` folder.
 So, the really-basic-non-functional-code of our project should be something like:
 ```javascript
-import temperature-module;
-import email-module;
+import temperature_module;
+import email_module;
 
-var temperature = temperature-module.getTemperature();
-email-module.sendEmail('bropy@bropy.com', 'The email subject', 'The temperature is ' + temperature);
+var temperature = temperature_module.getTemperature();
+email_module.sendEmail(
+	'bropy@bropy.com',
+	'The email subject',
+	'The temperature is ' + temperature
+);
 ```
 Easy, right? But, how we will define which module should we use? Because, remember we can get the temperature from different modules created for this (why? well, you can buy lot of differents temperture measurer and all of them work differently).
 
@@ -133,4 +137,7 @@ Suite for PyInTheSky projects.
 The community call `#PyInTheSky` all projects when in some way, you put your RaspberryPy in the sky for taking photos, or atmospheric measures.
 
 ### Projects comming
-Nobody knows. If you have an idea, create an Issue and we'll create it!
+If you have an idea, create an Issue and we'll create it!
+
+#### BroPyPrinter
+A basic and portable printer (no, not 3D)
