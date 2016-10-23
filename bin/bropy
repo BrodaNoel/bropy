@@ -8,7 +8,7 @@ then
 	# Let's check if the project is already installed
 	folder="$HOME/bropy/internals/projects/$project"
 
-	if [[ -f $folder ]]
+	if [[ -d $folder ]]
 	then
 		echo "$project project is already installed."
 		echo ':nothing_to_do_here: :jetpack:'
