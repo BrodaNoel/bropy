@@ -1,2 +1,29 @@
 #!/bin/bash
-echo "Hey! What's up?"
+action=$1
+
+if [[ $action == 'install' ]]
+then
+	project=$2
+
+	# Let's check if the project is already installed
+	folder="$HOME/bropy/internals/projects/$project"
+
+	if [[ -f $folder ]]
+	then
+		echo "$project project is already installed."
+		echo ':nothing_to_do_here: :jetpack:'
+	else
+		echo "Installing $project project..."
+
+		# Create main folder
+		mkdir $folder > /dev/null 2>&1
+
+		# Run installation file
+		$($HOME/bropy/projects/$project/install.sh)
+
+		# Log installation date
+		echo `date +%s` >> "$folder/installed.txt"
+	fi
+else
+	echo 'Unknown action'
+fi
