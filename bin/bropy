@@ -19,7 +19,7 @@ then
 		mkdir $folder > /dev/null 2>&1
 
 		# Run installation file
-		$($HOME/bropy/projects/$project/install.sh)
+		$HOME/bropy/projects/$project/install.sh
 
 		# Log installation date
 		echo `date +%s` >> "$folder/installed.txt"
