@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if [ -f "~/bropy/internal/installed.txt" ]
+if [ -f ~/bropy/internal/installed.txt ]
 then
 	echo 'Bropy is already installed.'
 	echo 'New version? You shuold run update.sh instead of install.sh'
