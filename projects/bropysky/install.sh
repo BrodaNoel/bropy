@@ -5,7 +5,7 @@ sudo apt-get install -y gpsd
 
 name='enable_uart'
 value='0'
-sed -i "s/^\($name\s*=\s*\).*\$/\1$value/" /boot/config.txt
+sudo sed -i "s/^\($name\s*=\s*\).*\$/\1$value/" /boot/config.txt
 
 sudo systemctl stop serial-getty@ttyAMA0.service
 
