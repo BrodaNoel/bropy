@@ -1,28 +1,61 @@
 #!/bin/bash
 action=$1
 
-if [[ $action == 'install' ]]
-then
-	project=$2
+# bropy install project [xxxx]
+# bropy test module [xxxx]
 
-	# Let's check if the project is already installed
-	folder="$HOME/bropy/internals/projects/$project"
+if [[ $1 == 'install' ]]; then
+	if [[ $2 == 'project' ]]; then
+		project=$3
 
-	if [[ -d $folder ]]
-	then
-		echo "$project project is already installed."
-		echo ':nothing_to_do_here: :jetpack:'
-	else
-		echo "Installing $project project..."
+		# Let's check if the project is already installed
+		folder="$HOME/bropy/internals/projects/$project"
 
-		# Create main folder
-		mkdir $folder > /dev/null 2>&1
+		if [[ -d $folder ]]; then
+			echo "$project project is already installed."
+			echo ':nothing_to_do_here: :jetpack:'
+		else
+			echo "Installing $project project..."
 
-		# Run installation file
-		$HOME/bropy/projects/$project/install.sh
+			# Create main folder
+			mkdir $folder > /dev/null 2>&1
 
-		# Log installation date
-		echo `date +%s` >> "$folder/installed.txt"
+			# Run installation file
+			$HOME/bropy/projects/$project/install.sh
+
+			# Log installation date
+			echo `date +%s` >> "$folder/installed.txt"
+		fi
+
+	elif [[ $2 == 'module' ]]; then
+		module=$3
+
+		# Let's check if the project is already installed
+		folder="$HOME/bropy/internals/modules/$module"
+
+		if [[ -d $folder ]]; then
+			echo "$module module is already installed."
+			echo ':nothing_to_do_here: :jetpack:'
+		else
+			echo "Installing $module module..."
+
+			# Create main folder
+			mkdir $folder > /dev/null 2>&1
+
+			# Run installation file
+			$HOME/bropy/modules/$module/install.sh
+
+			# Log installation date
+			echo `date +%s` >> "$folder/installed.txt"
+		fi
+	fi
+
+elif [[ $1 == 'test' ]]; then
+	if [[ $2 == 'project' ]]; then
+		echo "WILL DO: Test project $3"
+
+	elif [[ $2 == 'module' ]]; then
+		echo "WILL DO: Test module $3"
 	fi
 else
 	echo 'Unknown action'
