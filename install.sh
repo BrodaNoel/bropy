@@ -9,8 +9,12 @@ else
 	echo 'PATH=~/bropy/bin:$PATH' >> ~/.bash_profile
 	echo 'export PATH' >> ~/.bash_profile
 
+	# Basic folders
 	mkdir ~/bropy/internals > /dev/null 2>&1
 	mkdir ~/bropy/internals/projects > /dev/null 2>&1
+	mkdir ~/bropy/internals/modules > /dev/null 2>&1
+
+	# Define installation date
 	echo `date +%s` >> ~/bropy/internals/installed.txt
 
 	echo 'BroPy installed properly'
