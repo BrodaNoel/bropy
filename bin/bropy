@@ -55,7 +55,7 @@ elif [[ $1 == 'test' ]]; then
 		echo "WILL DO: Test project $3"
 
 	elif [[ $2 == 'module' ]]; then
-		echo "WILL DO: Test module $3"
+		$(~/bropy/modules/$3/test.sh)
 	fi
 else
 	echo 'Unknown action'
