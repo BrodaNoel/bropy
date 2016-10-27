@@ -6,7 +6,7 @@ DIR=`dirname $0`
 
 # Clean $1 (file to log the test)
 echo 'Cleaning temp file'
-rm $DIR/internals/test_data.json
+echo '' > $DIR/internals/test_data.json
 
 # Start module
 echo 'Starting services'

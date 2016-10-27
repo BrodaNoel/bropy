@@ -1,10 +1,12 @@
 #!/bin/bash
 
+DIR=`dirname $0`
+
 # Start module
-$("`dirname $0`/core/start.sh") > /dev/null 2>&1
+$DIR/core/start.sh > /dev/null 2>&1
 
 # Return the data
-$("python `dirname $0`/core/get.py")
+python $DIR/core/get.py
 
 # Stop module
-$("`dirname $0`/core/stop.sh") > /dev/null 2>&1
+$DIR/core/stop.sh > /dev/null 2>&1
