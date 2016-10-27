@@ -40,8 +40,8 @@ if __name__ == '__main__':
         print '{'
         print 'latitude:', gpsd.fix.latitude, ','
         print 'longitude:', gpsd.fix.longitude, ','
-        print 'time:"',gpsd.fix.time,'",'
-        print 'utcTime:"',gpsd.utc,'",'
+        print 'time:"' + gpsd.fix.time + '",'
+        print 'utcTime:"' + gpsd.utc + '",'
         print 'altitude:', gpsd.fix.altitude, ','
         print 'eps:', gpsd.fix.eps, ','
         print 'epx:', gpsd.fix.epx, ','
@@ -50,7 +50,7 @@ if __name__ == '__main__':
         print 'speed:', gpsd.fix.speed, ','
         print 'climb:', gpsd.fix.climb, ','
         print 'track:', gpsd.fix.track, ','
-        print 'mode:', gpsd.fix.mode, ','
+        print 'mode:', gpsd.fix.mode,
         #print 'satellites:', gpsd.satellites
         print '}'
         sys.exit()
