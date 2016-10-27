@@ -31,12 +31,13 @@ if __name__ == '__main__':
     attempts = 0
     gotData = False
 
-    while gotData == False and attempts < 3:
+    while not gotData and attempts < 3:
       #It may take a second or two to get good data
 
       if gpsd.fix.latitude != 0 or gpsd.fix.longitude != 0:
         gotData = True
         attempts += 1
+
         print '{'
         print 'latitude:', gpsd.fix.latitude, ','
         print 'longitude:', gpsd.fix.longitude, ','
@@ -53,9 +54,14 @@ if __name__ == '__main__':
         print 'mode:', gpsd.fix.mode
         #print 'satellites:', gpsd.satellites
         print '}'
-        sys.exit()
+        
+        sys.exit(0)
+
       else:
         time.sleep(1) #set to whatever
+
+      if not getData:
+        sys.exit(1)
 
   except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
     gpsp.running = False
