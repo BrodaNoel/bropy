@@ -25,6 +25,8 @@ if [[ $1 == 'install' ]]; then
 
 			# Log installation date
 			echo `date +%s` >> "$folder/installed.txt"
+
+			echo 'Project installed properly'
 		fi
 
 	elif [[ $2 == 'module' ]]; then
@@ -47,6 +49,8 @@ if [[ $1 == 'install' ]]; then
 
 			# Log installation date
 			echo `date +%s` >> "$folder/installed.txt"
+
+			echo 'Module installed properly'
 		fi
 	fi
 
@@ -59,6 +63,8 @@ elif [[ $1 == 'test' ]]; then
 
 		echo "Testing module: $module..."
 		$HOME/bropy/modules/$module/test.sh
+
+		echo 'Test finished'
 	fi
 else
 	echo 'Unknown action'
