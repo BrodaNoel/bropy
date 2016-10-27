@@ -7,6 +7,7 @@ from gps import *
 from time import *
 import time
 import threading
+import sys
 
 gpsd = None #seting the global variable
 
@@ -53,6 +54,7 @@ if __name__ == '__main__':
         print 'mode        ' , gpsd.fix.mode
         print
         print 'sats        ' , gpsd.satellites
+        sys.exit()
       else:
         time.sleep(1) #set to whatever
 
