@@ -2,22 +2,23 @@
 
 echo 'Testing GY-GPS6MV1...'
 
+DIR=`dirname $0`
+
 # Clean $1 (file to log the test)
 echo 'Cleaning temp file'
-rm $1
-touch $1
+rm $DIR/internals/test_data.json
 
 # Start module
 echo 'Starting services'
-`dirname $0`/core/start.sh
+$DIR/core/start.sh
 
 # Escribimos el dato en el archivo $1
 echo 'Geting and Writing data'
-`dirname $0`/get.sh >> $1
+$DIR/get.sh >> $DIR/internals/test_data.json
 
 # Stop module
 echo 'Stopping services'
-`dirname $0`/core/stop.sh
+$DIR/core/stop.sh
 
 # Analizamos el dato escrito en el archivo $1
 echo 'Analyzing data'
