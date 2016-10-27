@@ -8,6 +8,7 @@ from time import *
 import time
 import threading
 import sys
+import json
 
 gpsd = None #seting the global variable
 
@@ -37,23 +38,9 @@ if __name__ == '__main__':
       if gpsd.fix.latitude != 0 or gpsd.fix.longitude != 0:
         gotData = True
         attempts += 1
-        print
-        print ' GPS reading'
-        print '----------------------------------------'
-        print 'latitude    ' , gpsd.fix.latitude
-        print 'longitude   ' , gpsd.fix.longitude
-        print 'time utc    ' , gpsd.utc,' + ', gpsd.fix.time
-        print 'altitude (m)' , gpsd.fix.altitude
-        print 'eps         ' , gpsd.fix.eps
-        print 'epx         ' , gpsd.fix.epx
-        print 'epv         ' , gpsd.fix.epv
-        print 'ept         ' , gpsd.fix.ept
-        print 'speed (m/s) ' , gpsd.fix.speed
-        print 'climb       ' , gpsd.fix.climb
-        print 'track       ' , gpsd.fix.track
-        print 'mode        ' , gpsd.fix.mode
-        print
-        print 'sats        ' , gpsd.satellites
+        print json.dumps(gpsd.fix)
+        # print 'time:', gpsd.utc
+        # print 'sats:', gpsd.satellites
         sys.exit()
       else:
         time.sleep(1) #set to whatever
