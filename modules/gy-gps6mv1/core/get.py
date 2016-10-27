@@ -51,7 +51,7 @@ if __name__ == '__main__':
         print 'climb:', gpsd.fix.climb, ','
         print 'track:', gpsd.fix.track, ','
         print 'mode:', gpsd.fix.mode, ','
-        print 'satellites:', gpsd.satellites
+        #print 'satellites:', gpsd.satellites
         print '}'
         sys.exit()
       else:
