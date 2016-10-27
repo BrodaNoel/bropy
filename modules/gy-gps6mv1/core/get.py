@@ -31,10 +31,10 @@ if __name__ == '__main__':
   try:
     gpsp.start() # start it up
 
-    while gotData == False && attempts < 3:
+    while gotData == False and attempts < 3:
       #It may take a second or two to get good data
 
-      if gpsd.fix.latitude != 0 || gpsd.fix.longitude != 0:
+      if gpsd.fix.latitude != 0 or gpsd.fix.longitude != 0:
         gotData = True
         attempts++
         print
