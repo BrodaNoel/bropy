@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
       if gpsd.fix.latitude != 0 or gpsd.fix.longitude != 0:
         gotData = True
-        attempts++
+        attempts += 1
         print
         print ' GPS reading'
         print '----------------------------------------'
