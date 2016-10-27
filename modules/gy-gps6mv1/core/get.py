@@ -10,6 +10,9 @@ import threading
 
 gpsd = None #seting the global variable
 
+attempts = 0
+gotData = False
+
 class GpsPoller(threading.Thread):
   def __init__(self):
     threading.Thread.__init__(self)
@@ -28,31 +31,32 @@ if __name__ == '__main__':
   try:
     gpsp.start() # start it up
 
-    while True:
+    while gotData == False && attempts < 3:
       #It may take a second or two to get good data
 
-      print
-      print ' GPS reading'
-      print '----------------------------------------'
-      print 'latitude    ' , gpsd.fix.latitude
-      print 'longitude   ' , gpsd.fix.longitude
-      print 'time utc    ' , gpsd.utc,' + ', gpsd.fix.time
-      print 'altitude (m)' , gpsd.fix.altitude
-      print 'eps         ' , gpsd.fix.eps
-      print 'epx         ' , gpsd.fix.epx
-      print 'epv         ' , gpsd.fix.epv
-      print 'ept         ' , gpsd.fix.ept
-      print 'speed (m/s) ' , gpsd.fix.speed
-      print 'climb       ' , gpsd.fix.climb
-      print 'track       ' , gpsd.fix.track
-      print 'mode        ' , gpsd.fix.mode
-      print
-      print 'sats        ' , gpsd.satellites
-
-      time.sleep(1) #set to whatever
+      if gpsd.fix.latitude != 0 || gpsd.fix.longitude != 0:
+        gotData = True
+        attempts++
+        print
+        print ' GPS reading'
+        print '----------------------------------------'
+        print 'latitude    ' , gpsd.fix.latitude
+        print 'longitude   ' , gpsd.fix.longitude
+        print 'time utc    ' , gpsd.utc,' + ', gpsd.fix.time
+        print 'altitude (m)' , gpsd.fix.altitude
+        print 'eps         ' , gpsd.fix.eps
+        print 'epx         ' , gpsd.fix.epx
+        print 'epv         ' , gpsd.fix.epv
+        print 'ept         ' , gpsd.fix.ept
+        print 'speed (m/s) ' , gpsd.fix.speed
+        print 'climb       ' , gpsd.fix.climb
+        print 'track       ' , gpsd.fix.track
+        print 'mode        ' , gpsd.fix.mode
+        print
+        print 'sats        ' , gpsd.satellites
+      else:
+        time.sleep(1) #set to whatever
 
   except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
-    print "\nKilling Thread..."
     gpsp.running = False
     gpsp.join() # wait for the thread to finish what it's doing
-print "Done.\nExiting."
