@@ -10,9 +10,6 @@ import threading
 
 gpsd = None #seting the global variable
 
-attempts = 0
-gotData = False
-
 class GpsPoller(threading.Thread):
   def __init__(self):
     threading.Thread.__init__(self)
@@ -30,6 +27,8 @@ if __name__ == '__main__':
   gpsp = GpsPoller() # create the thread
   try:
     gpsp.start() # start it up
+    attempts = 0
+    gotData = False
 
     while gotData == False and attempts < 3:
       #It may take a second or two to get good data
