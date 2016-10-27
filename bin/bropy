@@ -40,7 +40,7 @@ if [[ $1 == 'install' ]]; then
 			echo "Installing $module module..."
 
 			# Create main folder
-			mkdir $folder > /dev/null 2>&1
+			mkdir $folder
 
 			# Run installation file
 			$HOME/bropy/modules/$module/install.sh
@@ -55,7 +55,10 @@ elif [[ $1 == 'test' ]]; then
 		echo "WILL DO: Test project $3"
 
 	elif [[ $2 == 'module' ]]; then
-		$(~/bropy/modules/$3/test.sh)
+		module=$3
+
+		echo "Testing module: $module..."
+		$HOME/bropy/modules/$module/test.sh
 	fi
 else
 	echo 'Unknown action'
