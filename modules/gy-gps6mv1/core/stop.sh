@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo 'Stopping GY-GPS6MV1'
+echo 'Stopping GY-GPS6MV1 services'
