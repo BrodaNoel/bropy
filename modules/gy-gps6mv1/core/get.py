@@ -38,22 +38,26 @@ if __name__ == '__main__':
         gotData = True
         attempts += 1
 
-        print '{'
-        print 'latitude:', gpsd.fix.latitude, ','
-        print 'longitude:', gpsd.fix.longitude, ','
-        print 'time:"' + gpsd.fix.time + '",'
-        print 'utcTime:"' + gpsd.utc + '",'
-        print 'altitude:', gpsd.fix.altitude, ','
-        print 'eps:', gpsd.fix.eps, ','
-        print 'epx:', gpsd.fix.epx, ','
-        print 'epv:', gpsd.fix.epv, ','
-        print 'ept:', gpsd.fix.ept, ','
-        print 'speed:', gpsd.fix.speed, ','
-        print 'climb:', gpsd.fix.climb, ','
-        print 'track:', gpsd.fix.track, ','
-        print 'mode:', gpsd.fix.mode
+        output = '{'
+
+        output += '{'
+        output += 'latitude:', gpsd.fix.latitude, ','
+        output += 'longitude:', gpsd.fix.longitude, ','
+        output += 'time:"' + gpsd.fix.time + '",'
+        output += 'utcTime:"' + gpsd.utc + '",'
+        output += 'altitude:', gpsd.fix.altitude, ','
+        output += 'eps:', gpsd.fix.eps, ','
+        output += 'epx:', gpsd.fix.epx, ','
+        output += 'epv:', gpsd.fix.epv, ','
+        output += 'ept:', gpsd.fix.ept, ','
+        output += 'speed:', gpsd.fix.speed, ','
+        output += 'climb:', gpsd.fix.climb, ','
+        output += 'track:', gpsd.fix.track, ','
+        output += 'mode:', gpsd.fix.mode
         #print 'satellites:', gpsd.satellites
-        print '}'
+        output += '}'
+
+        sys.stdout.write(output)
         
         sys.exit(0)
 
