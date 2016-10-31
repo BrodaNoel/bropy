@@ -64,7 +64,7 @@ if __name__ == '__main__':
       else:
         time.sleep(1) #set to whatever
 
-      if not getData:
+      if not gotData:
         sys.exit(1)
 
   except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
