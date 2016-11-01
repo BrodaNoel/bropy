@@ -64,9 +64,10 @@ if __name__ == '__main__':
       else:
         time.sleep(1) #set to whatever
 
-      if not gotData:
-        sys.exit(1)
+    if not gotData:
+      sys.exit(1)
 
-  except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
+  except: #when you press ctrl+c
+    print("Unexpected error:", sys.exc_info()[0])
     gpsp.running = False
     gpsp.join() # wait for the thread to finish what it's doing
