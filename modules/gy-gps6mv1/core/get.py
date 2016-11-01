@@ -68,6 +68,11 @@ if __name__ == '__main__':
       sys.exit(1)
 
   except: #when you press ctrl+c
-    print("Unexpected error:", sys.exc_info()[0])
-    gpsp.running = False
-    gpsp.join() # wait for the thread to finish what it's doing
+    try:
+      print("Unexpected error (1):", sys.exc_info()[0])
+      gpsp.running = False
+      gpsp.join() # wait for the thread to finish what it's doing
+
+    except:
+      print("Unexpected error (2):", sys.exc_info()[0])
+      sys.exit(1)
