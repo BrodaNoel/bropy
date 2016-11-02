@@ -31,7 +31,7 @@ if __name__ == '__main__':
     attempts = 0
     gotData = False
 
-    while not gotData and attempts < 3:
+    while not gotData and attempts < 5:
       attempts += 1
 
       #It may take a second or two to get good data
