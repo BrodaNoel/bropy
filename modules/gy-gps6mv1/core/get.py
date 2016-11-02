@@ -35,8 +35,7 @@ if __name__ == '__main__':
       attempts += 1
 
       #It may take a second or two to get good data
-      # TODO What it we get a "nan"?
-      if gpsd.fix.latitude != 0 or gpsd.fix.longitude != 0:
+      if (gpsd.fix.latitude != 0 or gpsd.fix.longitude != 0) and (str(gpsd.fix.latitude) != 'nan' and str(gpsd.fix.longitude) != 'nan'):
         gotData = True
 
         output = '{"status": "ok", "data": '
