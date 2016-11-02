@@ -69,5 +69,4 @@ if __name__ == '__main__':
   except:
     sys.stdout.write('{"status": "error", "message": "' + str(sys.exc_info()) + '"}')
 
-gpsp.running = False
-gpsp.join() # wait for the thread to finish what it's doing
+  gpsp.running = False
