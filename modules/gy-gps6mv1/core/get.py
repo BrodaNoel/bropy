@@ -32,12 +32,12 @@ if __name__ == '__main__':
     gotData = False
 
     while not gotData and attempts < 3:
-      #It may take a second or two to get good data
+      attempts += 1
 
+      #It may take a second or two to get good data
       # TODO What it we get a "nan"?
       if gpsd.fix.latitude != 0 or gpsd.fix.longitude != 0:
         gotData = True
-        attempts += 1
 
         output = '{"status": "ok", "data": '
 
