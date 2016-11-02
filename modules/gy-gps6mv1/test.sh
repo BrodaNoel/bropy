@@ -13,7 +13,7 @@ echo 'Starting services'
 $DIR/core/start.sh
 
 # Escribimos el dato en el archivo $1
-echo 'Geting and Writing data'
+echo 'Getting and Writing data'
 $DIR/get.sh >> $DIR/internals/test_data.json
 
 # Stop module
