@@ -8,17 +8,9 @@ DIR=`dirname $0`
 echo 'Cleaning temp file'
 echo '' > $DIR/internals/test_data.json
 
-# Start module
-echo 'Starting services'
-$DIR/core/start.sh
-
 # Escribimos el dato en el archivo $1
 echo 'Getting and Writing data'
-$DIR/get.sh >> $DIR/internals/test_data.json
-
-# Stop module
-echo 'Stopping services'
-$DIR/core/stop.sh
+$DIR/get.sh > $DIR/internals/test_data.json
 
 # Analizamos el dato escrito en el archivo $1
 echo 'Analyzing data'
