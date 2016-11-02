@@ -1,7 +1,8 @@
 #! /usr/bin/python
 import json
+import os
 
-f = open('./../internals/test_data.json', 'r')
+f = open(os.path.dirname(os.path.realpath(__file__)) + '/../internals/test_data.json', 'r')
 response = json.loads(f.read())
 
 if response.status == 'ok':
