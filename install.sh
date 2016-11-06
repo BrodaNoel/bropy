@@ -14,6 +14,9 @@ else
 	mkdir ~/bropy/internals/projects > /dev/null 2>&1
 	mkdir ~/bropy/internals/modules > /dev/null 2>&1
 
+	# Basic software
+	sudo apt-get install -y i2c-tools
+
 	# Define installation date
 	echo `date +%s` >> ~/bropy/internals/installed.txt
 

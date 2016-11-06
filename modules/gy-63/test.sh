@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'Testing GY-GPS6MV1...'
+echo 'Testing GY-63...'
 
 DIR=`dirname $0`
 
