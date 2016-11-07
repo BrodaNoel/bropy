@@ -98,4 +98,4 @@ cTemp = TEMP / 100.0
 # Output data to screen
 # PRESSURE: mbars
 # TEMPERATURE: Celsius
-sys.stdout.write('{"pressure": ' + pressure + ', "temperature": ' + cTemp + '}')
+sys.stdout.write('{"pressure": ' + str(pressure) + ', "temperature": ' + str(cTemp) + '}')

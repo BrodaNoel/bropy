@@ -5,7 +5,7 @@ import os
 f = open(os.path.dirname(os.path.realpath(__file__)) + '/../internals/test_data.json', 'r')
 response = json.loads(f.read())
 
-if response['pressure'].isdigit() and response['temperature'].isdigit():
+if isinstance(response['pressure'], float) and isinstance(response['temperature'], float) :
 	print 'Everything is working well. Good news!'
 else:
 	print "Looks like it's NOT working. Bad news!"
