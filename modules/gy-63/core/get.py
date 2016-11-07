@@ -94,8 +94,10 @@ OFF = OFF - OFF2
 SENS = SENS - SENS2
 pressure = ((((D1 * SENS) / 2097152) - OFF) / 32768.0) / 100.0
 cTemp = TEMP / 100.0
+altitude = (1 - (pressure / 1013.25)**0.190284) * 44307.69396
 
 # Output data to screen
 # PRESSURE: mbars
 # TEMPERATURE: Celsius
-sys.stdout.write('{"pressure": ' + str(pressure) + ', "temperature": ' + str(cTemp) + '}')
+# ALTITUDE: Meters
+sys.stdout.write('{"pressure": ' + str(pressure) + ', "temperature": ' + str(cTemp) + ', "altitude": ' + str(altitude) + '}')
