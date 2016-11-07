@@ -42,4 +42,4 @@ if yMag > 32767 :
 	yMag -= 65536
 
 # Output data to screen
-sys.stdout.write('{ "x": ' + xMag + ', "y": ' + yMag + ', "z": ' + zMag + ' }')
+sys.stdout.write('{ "x": ' + str(xMag) + ', "y": ' + str(yMag) + ', "z": ' + str(zMag) + ' }')
