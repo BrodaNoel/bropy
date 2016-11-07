@@ -1,5 +1,6 @@
 import picamera
 import os
+import time
 
 folder = os.path.dirname(os.path.realpath(__file__)) + '/../internals'
 camera = picamera.PiCamera()
@@ -24,5 +25,5 @@ camera.crop = (0.0, 0.0, 1.0, 1.0)
 camera.capture(folder + '/test_photo.jpg')
 
 camera.start_recording(folder + '/test_video.h264')
-sleep(1)
+time.sleep(1)
 camera.stop_recording()
