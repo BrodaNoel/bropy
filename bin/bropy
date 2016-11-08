@@ -54,6 +54,17 @@ if [[ $1 == 'install' ]]; then
 		fi
 	fi
 
+elif [[ $1 == 'call' ]]; then
+	module=$3
+	subaction=$4
+	firstvalue=$5
+	secondvalue=$6
+
+	# bropy call module gsm-modem sendsms "phone-number" "text"
+	$HOME/bropy/modules/$module/call.sh $subaction $firstvalue $secondvalue
+	exit $?
+
+
 elif [[ $1 == 'test' ]]; then
 	if [[ $2 == 'project' ]]; then
 		echo "WILL DO: Test project $3"
