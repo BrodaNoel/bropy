@@ -61,7 +61,7 @@ elif [[ $1 == 'call' ]]; then
 	secondvalue=$6
 
 	# bropy call module gsm-modem sendsms "phone-number" "text"
-	$HOME/bropy/modules/$module/call.sh $subaction $firstvalue $secondvalue
+	$HOME/bropy/modules/$module/call.sh "$subaction" "$firstvalue" "$secondvalue"
 	exit $?
 
 
